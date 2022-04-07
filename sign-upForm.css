@@ -296,6 +296,12 @@ p > span {
   }
 }
 
+@media (min-width: 1200px){
+  .credit{
+    position: fixed;
+  }
+}
+
 @media (min-width: 1385px) {
   :is(html *, .btn) {
     font-size: 1rem;
