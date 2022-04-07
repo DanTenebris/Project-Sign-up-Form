@@ -37,27 +37,30 @@
           <div>
             <div class="inner-div">
               <label for="name">
-                <p>First Name</p>
+                <p>First Name <span>*</span></p>
               </label>
-              <input class="input" type="text" id="name" name="name" placeholder="Thor">
+              <input class="input" type="text" id="name" name="name" placeholder="Thor" minlength="3" required>
+              <span class="error" aria-live="polite"></span>
             </div>
           </div>
 
           <div>
             <div class="inner-div">
               <label for="last-name">
-                <p>Last Name</p>
+                <p>Last Name <span>*</span></p>
               </label>
-              <input class="input" type="text" id="last-name" name="last-name" placeholder="Odinson">
+              <input class="input" type="text" id="last-name" name="last-name" placeholder="Odinson" minlength="3" required>
+              <span class="error" aria-live="polite"></span>
             </div>
           </div>
 
           <div>
             <div class="inner-div">
               <label for="email">
-                <p>Email</p>
+                <p>Email <span>*</span></p>
               </label>
-              <input class="input" type="email" name="email" id="email" placeholder="thor@hotmail.com">
+              <input class="input" type="email" name="email" id="email" placeholder="thor@hotmail.com" minlength="3" required>
+              <span class="error" aria-live="polite"></span>
             </div>
           </div>
 
@@ -66,25 +69,28 @@
               <label for="phone">
                 <p>Phone Number</p>
               </label>
-              <input class="input" type="tel" name="phone" id="phone" placeholder="+01-099-999">
+              <input class="input" type="tel" name="phone" id="phone" placeholder="+010-099-999">
+              <span class="error" aria-live="polite"></span>
             </div>
           </div>
 
           <div>
             <div class="inner-div">
               <label for="pwd">
-                <p>Password</p>
+                <p>Password <span>*</span></p>
               </label>
-              <input class="input" type="password" name="pwd" id="pwd" placeholder="********">
+              <input class="input" type="password" name="pwd" id="pwd" placeholder="********" minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+              <span class="error" aria-live="polite"></span>
             </div>
           </div>
 
           <div>
             <div class="inner-div">
               <label for="pwd2">
-                <p>Confirm Password</p>
+                <p>Confirm Password <span>*</span></p>
               </label>
-              <input class="input" type="password" name="pwd2" id="pwd2" placeholder="********">
+              <input class="input" type="password" name="pwd2" id="pwd2" placeholder="********" required>
+              <span class="error" aria-live="polite"></span>
             </div>
           </div>
 
@@ -100,7 +106,7 @@
   </main>
 
   <div class="credit">
-    <p><a href="#">Illustration</a> by <a href="#">コーラ</a> on <a href="#">Pixiv</a></p>
+    <p><a href="https://www.pixiv.net/en/artworks/55739709">Illustration</a> by <a href="https://www.pixiv.net/en/users/810305">コーラ</a> on <a href="https://www.pixiv.net">Pixiv</a></p>
   </div>
 
   <div class="background-container">

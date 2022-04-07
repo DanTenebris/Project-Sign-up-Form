@@ -53,7 +53,6 @@ main {
 
 .form-container {
   position: relative;
-  /* display: grid; */
   width: min(100vw, 70ch);
   padding-bottom: 50px;
 }
@@ -97,15 +96,41 @@ input {
   height: 2rem;
 }
 
-.input:focus {
-  /* border: 2px solid blue; */
+.input:is(:focus, :hover) {
   outline-color: blue;
-  border: 1px solid blue;
   box-shadow: 1px 1px 4px blue;
+}
+
+.input:focus:invalid {
+  outline: none;
+  border-color: #900;
+  background-color: #fdd;
+  box-shadow: 1px 1px 4px #900;
+}
+
+/* Error message */
+.error {
+  display: none;
+  width: 100%;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
 }
 
 label > p {
   padding: 5px;
+}
+
+p > span {
+  color: red;
 }
 
 .haveAccount {
@@ -166,6 +191,10 @@ label > p {
   .form-container {
     margin-top: 100px;
     margin-bottom: 120px;
+  }
+
+  .credit{
+    position: relative;
   }
 }
 
@@ -251,11 +280,7 @@ label > p {
     grid-column: 1/3;
   }
 
-  .credit {
-    position: fixed;
-  }
-
-  @media (min-height: 1000px){
+  @media (min-height: 1000px) {
     main {
       display: flex;
       min-height: calc(100vh - 30px);
@@ -265,7 +290,7 @@ label > p {
   }
 }
 
-@media (min-height: 1200px) {
+@media (min-height: 1200px)and (max-width: 900px) {
   .credit {
     position: fixed;
   }
@@ -322,5 +347,11 @@ label > p {
 
   .inner-div {
     background-color: var(--primary-color);
+  }
+}
+
+@media (min-width: 1500px) {
+  :is(html *, .btn) {
+    font-size: 1rem;
   }
 }
